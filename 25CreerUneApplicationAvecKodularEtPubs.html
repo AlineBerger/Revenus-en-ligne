@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Créer une application avec Kodular + pubs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #222;
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1, h2 {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    h1 {
+      color: #e1ad01;
+    }
+    h2 {
+      color: #f6c700;
+    }
+    img {
+      display: block;
+      margin: 30px auto;
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    ul {
+      padding-left: 20px;
+    }
+    code {
+      background: #f4f4f4;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<h1>💰 Gagner de l’argent en créant des applications avec Kodular (sans coder)</h1>
+
+<h2>🔍 <strong>Introduction : Pourquoi Kodular ?</strong></h2>
+<p>Kodular est une plateforme gratuite de création d’applications mobiles Android sans aucune connaissance en programmation. Son interface intuitive en glisser-déposer permet de concevoir des apps fonctionnelles, visuelles, et <strong>monétisables</strong> rapidement grâce à l’intégration directe de publicités.</p>
+<p>✅ Idéal pour les débutants, les créateurs de contenus, ou les entrepreneurs à petit budget.</p>
+
+<h2>🧱 <strong>Partie 1 : Comprendre le fonctionnement de Kodular</strong></h2>
+
+<h2>🎨 <strong>Qu’est-ce que Kodular ?</strong></h2>
+<ul>
+  <li>Plateforme no-code gratuite</li>
+  <li>Fonctionne directement dans le navigateur</li>
+  <li>Permet de créer des apps Android par glisser-déposer</li>
+  <li>Intègre un système de "blocs logiques" pour gérer les actions</li>
+</ul>
+
+<h2>🛠 <strong>Outils principaux dans Kodular</strong></h2>
+<ul>
+  <li><strong>Designer</strong> : pour créer visuellement l’interface</li>
+  <li><strong>Blocks</strong> : pour définir le comportement (logique, navigation, actions)</li>
+  <li><strong>Assets</strong> : pour ajouter images, sons, fichiers, etc.</li>
+  <li><strong>Preview/Export</strong> : pour tester l’app ou générer l’APK final</li>
+</ul>
+
+<h2>📱 <strong>Partie 2 : Créer une première application simple (exemple pas à pas)</strong></h2>
+
+<img src="A_screenshot_of_a_French-language_guide_titled_&quot;Ga.png" alt="Visuel Kodular"/>
+
+<h2>🧠 <strong>Idée simple : une application de citations motivantes</strong></h2>
+<ol>
+  <li>Ouvre <a href="https://creator.kodular.io" target="_blank">https://creator.kodular.io</a></li>
+  <li>Crée un nouveau projet (nomme-le “CitationsMotivantes”)</li>
+  <li>Dans la section “Designer” :
+    <ul>
+      <li>Ajoute un <strong>Label</strong> pour le titre</li>
+      <li>Ajoute un <strong>Button</strong> : "Afficher une citation"</li>
+      <li>Ajoute un <strong>Label vide</strong> pour afficher la citation</li>
+      <li>Ajoute une <strong>Image de fond</strong> (optionnel)</li>
+    </ul>
+  </li>
+  <li>Dans la section “Blocks” :
+    <ul>
+      <li>Crée une liste de citations (liste de textes)</li>
+      <li>Quand l’utilisateur clique sur le bouton, choisir une citation au hasard dans la liste et l’afficher</li>
+    </ul>
+  </li>
+</ol>
+
+<pre><code>When Button1.Click
+→ set Label2.Text to select list item 
+(list: citations, index: random integer 1 to length of list)</code></pre>
+
+<p>🎯 Résultat : Une app motivante, fonctionnelle, et sans une ligne de code !</p>
+
+<h2>💸 <strong>Partie 3 : Monétiser avec les publicités (AdMob)</strong></h2>
+
+<h2>🧾 <strong>Pré-requis :</strong></h2>
+<ul>
+  <li>Avoir un compte Google AdMob : <a href="https://apps.admob.com" target="_blank">https://apps.admob.com</a></li>
+  <li>Ajouter une application (même si elle n’est pas encore sur Play Store)</li>
+  <li>Créer des emplacements publicitaires :
+    <ul>
+      <li>Bannière</li>
+      <li>Interstitial (plein écran)</li>
+      <li>Rewarded ads (pubs récompensées)</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>🧩 <strong>Intégrer les publicités dans Kodular</strong></h2>
+<ol>
+  <li>Dans "Designer", ajoute les composants :
+    <ul>
+      <li>AdMob Banner</li>
+      <li>AdMob Interstitial</li>
+      <li>AdMob Rewarded Ad</li>
+    </ul>
+  </li>
+  <li>Dans “Properties” de chaque pub : Renseigne ton ID de bloc AdMob</li>
+  <li>Dans "Blocks", affiche les pubs selon des événements :</li>
+</ol>
+
+<pre><code>When Button1.Click
+→ if InterstitialAd is loaded → show InterstitialAd</code></pre>
+
+<h2>🧠 <strong>Partie 4 : Idées d’applications simples mais rentables</strong></h2>
+<ul>
+  <li>📚 Citations et affirmations :
+    <ul>
+      <li>Citation du jour</li>
+      <li>Affirmations positives</li>
+      <li>Versets, prières, mantras</li>
+    </ul>
+  </li>
+  <li>🎶 Sons relaxants ou bruit blanc :
+    <ul>
+      <li>Musique de concentration</li>
+      <li>Sons de la nature</li>
+      <li>Bruit blanc pour dormir</li>
+    </ul>
+  </li>
+  <li>🎮 Quiz à choix multiples :
+    <ul>
+      <li>Culture générale</li>
+      <li>Code de la route</li>
+      <li>Séries ou films</li>
+    </ul>
+  </li>
+  <li>🧩 Applications utilitaires :
+    <ul>
+      <li>Compteurs de jours (sevrage, objectifs)</li>
+      <li>Générateurs de mots de passe</li>
+      <li>Convertisseurs de devises, taille, poids</li>
+    </ul>
+  </li>
+</ul>
+<p><strong>Chaque app peut être améliorée avec un système de pubs récompensées, de partage ou de push notification.</strong></p>
+
+<h2>🔁 <strong>Partie 5 : Astuces pour multiplier tes gains</strong></h2>
+<ul>
+  <li>🚀 Crée plusieurs apps autour de la même niche</li>
+  <li>👥 Encourage le partage via un bouton bonus</li>
+  <li>🧠 Optimise l’expérience utilisateur (moins de pubs, belle interface)</li>
+  <li>📲 Propose un lien vers tes autres apps</li>
+</ul>
+
+<h2>📤 <strong>Partie 6 : Publier ton application</strong></h2>
+
+<h2>📦 <strong>Générer l’APK dans Kodular</strong></h2>
+<ul>
+  <li>Export APK to computer</li>
+  <li>Tester sur ton téléphone</li>
+  <li>Optionnel : compile en .aab pour Google Play</li>
+</ul>
+
+<h2>🛒 <strong>Publier sur Google Play (facultatif mais plus pro)</strong></h2>
+<ul>
+  <li>Compte Google Play Console (25$ à vie)</li>
+  <li>Prépare :
+    <ul>
+      <li>Icône 512x512</li>
+      <li>Screenshot 1080x1920</li>
+      <li>Description optimisée</li>
+      <li>Politique de confidentialité</li>
+    </ul>
+  </li>
+  <li>Upload APK ou .aab → Attente de validation (&lt; 48h)</li>
+</ul>
+<p><strong>⚠️ Respecte bien les règles de Google</strong></p>
+
+<h2>📊 <strong>Partie 7 : Suivi et optimisation de revenus</strong></h2>
+<ul>
+  <li>📈 Suivi via AdMob :
+    <ul>
+      <li>Revenus par type de pub</li>
+      <li>Nombre d’impressions</li>
+      <li>ECPM moyen</li>
+    </ul>
+  </li>
+  <li>🧪 Teste différentes structures de pub</li>
+  <li>🎁 Mets les pubs dans une section “Bonus”</li>
+</ul>
+
+<h2>🧠 <strong>Partie 8 : Automatiser et scaler le processus</strong></h2>
+<ul>
+  <li>👥 Utilise ChatGPT et Canva</li>
+  <li>🧰 Duplique des projets Kodular</li>
+  <li>📌 Crée une page Linktree pour tes apps</li>
+</ul>
+
+<h2>🧾 <strong>Conclusion : Objectif 100€/mois et au-delà</strong></h2>
+<ul>
+  <li>1 000 utilisateurs actifs = 10–30€/mois</li>
+  <li>10 apps bien conçues = 100–300€/mois</li>
+  <li>Avec pubs rewarded = gains doublés</li>
+</ul>
+
+<h2>📚 <strong>Ressources utiles</strong></h2>
+<ul>
+  <li><a href="https://creator.kodular.io" target="_blank">👉 Créer ton app avec Kodular</a></li>
+  <li><a href="https://apps.admob.com" target="_blank">👉 Gérer tes publicités avec AdMob</a></li>
+  <li><a href="https://play.google.com/console" target="_blank">👉 Publier sur Google Play</a></li>
+  <li><a href="https://canva.com" target="_blank">👉 Créer tes icônes et visuels avec Canva</a></li>
+</ul>
+
+</body>
+</html>
